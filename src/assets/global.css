@@ -53,6 +53,7 @@ input {
   font: inherit;
   color: inherit;
   outline: none;
+  background-color: transparent;
 }
 
 button:hover {
@@ -64,4 +65,8 @@ body {
   font-family: "Manrope", sans-serif;
   max-width: 1160px;
   margin: auto;
+}
+
+html {
+  background: #f4f4f4;
 }
