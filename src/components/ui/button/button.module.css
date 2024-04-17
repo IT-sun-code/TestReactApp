@@ -1,0 +1,27 @@
+.btn,
+.btnDisabled {
+  background-color: #161616;
+  width: 170px;
+  height: 46px;
+  border-radius: 50px;
+  color: #fdfdfd;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #f4f4f4;
+  color: #595959;
+}
+
+.btnDisabled {
+  background-color: #dadada;
+}
+
+.btnDisabled:hover {
+  cursor: not-allowed;
+}

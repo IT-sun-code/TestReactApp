@@ -10,7 +10,6 @@ import {
 
 import Dropdown from "../dropdown/Dropdown";
 import ava from "/images/ava.jpg";
-import more from "/icons/more-default-icon.svg";
 import truncateString from "../../../utils/truncateString";
 
 function Card({ user }) {
@@ -57,9 +56,7 @@ function Card({ user }) {
                 {truncatedUsername}
               </h2>
               <div className={styles.moreContainer} onClick={toggleDropdown}>
-                <button className={styles.moreButton} title="More">
-                  <img src={more} alt="more" className={styles.moreIcon} />
-                </button>
+                <button className={styles.moreButton} title="More"></button>
                 {dropdownVisible && (
                   <div className={styles.dropdownMenu}>
                     <Dropdown
@@ -67,6 +64,7 @@ function Card({ user }) {
                       handleArchive={archiveCard}
                       handleRemove={removeUser}
                       handleActive={toggleActive}
+                      userId={id}
                     />
                   </div>
                 )}

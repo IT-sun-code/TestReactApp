@@ -17,8 +17,13 @@
   height: 38px;
   margin-bottom: 8px;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .content > div:last-child {
   margin-bottom: 0;
+}
+
+.content > div:hover {
+  color: #22a0bc;
 }

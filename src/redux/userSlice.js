@@ -40,6 +40,18 @@ const userSlice = createSlice({
         userToSetActive.isActive = isActive;
       }
     },
+    updateUser(state, action) {
+      const { userId, newData } = action.payload;
+      const userToUpdate = state.users.find((user) => user.id === userId);
+      if (userToUpdate) {
+        userToUpdate.name = newData.name;
+        userToUpdate.username = newData.username;
+        userToUpdate.email = newData.email;
+        userToUpdate.address.city = newData.city;
+        userToUpdate.phone = newData.phone;
+        userToUpdate.company.name = newData.company;
+      }
+    },
   },
 });
 
@@ -50,6 +62,7 @@ export const {
   toggleCardActive,
   removeCard,
   setActive,
+  updateUser,
 } = userSlice.actions;
 
 export default userSlice.reducer;

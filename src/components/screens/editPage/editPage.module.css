@@ -1,0 +1,57 @@
+.header {
+  margin-top: 56px;
+  margin-bottom: 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  height: 24px;
+  margin-right: 8px;
+}
+
+.back {
+  color: #595959;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings {
+  background-color: #fdfdfd;
+  width: 360px;
+  height: 813px;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.ava {
+  object-fit: cover;
+  border-radius: 8px;
+  width: 280px;
+  height: 485px;
+  margin-bottom: 40px;
+}
+
+.profileData {
+  width: 760px;
+  height: 813px;
+  border-radius: 16px;
+  padding: 40px;
+  background-color: #fdfdfd;
+}
+
+.dataHeader {
+  margin-bottom: 24px;
+}
+
+.dataHeader > h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
