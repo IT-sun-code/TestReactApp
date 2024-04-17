@@ -1,9 +1,38 @@
 import styles from "./card.module.css";
+
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import {
+  toggleCardActive,
+  removeCard,
+  setActive,
+} from "../../../redux/userSlice";
+
+import Dropdown from "../dropdown/Dropdown";
 import ava from "/images/ava.jpg";
 import more from "/icons/more-default-icon.svg";
 import truncateString from "../../../utils/truncateString";
+
 function Card({ user }) {
-  const { username, company, address } = user;
+  const dispatch = useDispatch();
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const { id, username, company, address, isActive } = user;
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const archiveCard = () => {
+    dispatch(toggleCardActive({ userId: id, isActive: false }));
+  };
+
+  const removeUser = () => {
+    dispatch(removeCard({ userId: id }));
+  };
+
+  const toggleActive = () => {
+    dispatch(setActive({ userId: id, isActive: !isActive }));
+  };
 
   //   Trimming lines that are too long
   const truncatedUsername = truncateString(username, 12);
@@ -11,25 +40,54 @@ function Card({ user }) {
   const truncatedCityName = truncateString(address.city, 18);
 
   return (
-    <div className={styles.card}>
-      <img src={ava} alt="avatar" className={styles.ava} />
-      <div className={styles.info}>
-        <div className={styles.mainInfo}>
-          <div className={styles.nameAndMore}>
-            <h2 className={styles.name} title={username}>
-              {truncatedUsername}
-            </h2>
-            <img src={more} alt="more" />
+    <>
+      <div className={styles.card}>
+        <img
+          src={ava}
+          alt="avatar"
+          className={isActive ? styles.ava : styles.avaArchive}
+        />
+        <div className={styles.info}>
+          <div className={styles.mainInfo}>
+            <div className={styles.nameAndMore}>
+              <h2
+                className={isActive ? styles.name : styles.nameArchive}
+                title={username}
+              >
+                {truncatedUsername}
+              </h2>
+              <div className={styles.moreContainer} onClick={toggleDropdown}>
+                <button className={styles.moreButton} title="More">
+                  <img src={more} alt="more" className={styles.moreIcon} />
+                </button>
+                {dropdownVisible && (
+                  <div className={styles.dropdownMenu}>
+                    <Dropdown
+                      isActive={isActive}
+                      handleArchive={archiveCard}
+                      handleRemove={removeUser}
+                      handleActive={toggleActive}
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+            <div
+              className={isActive ? styles.company : styles.companyArchive}
+              title={company.name}
+            >
+              {truncatedCompanyName}
+            </div>
           </div>
-          <div className={styles.company} title={company.name}>
-            {truncatedCompanyName}
+          <div
+            className={isActive ? styles.city : styles.cityArchive}
+            title={address.city}
+          >
+            {truncatedCityName}
           </div>
-        </div>
-        <div className={styles.city} title={address.city}>
-          {truncatedCityName}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

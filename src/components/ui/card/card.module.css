@@ -17,12 +17,17 @@
   margin-bottom: 0;
 }
 
-.ava {
+.ava,
+.avaArchive {
   object-fit: cover;
   border-radius: 8px;
   min-width: 112px;
   height: 122px;
   margin-right: 20px;
+}
+
+.avaArchive {
+  filter: grayscale(100%);
 }
 
 .info {
@@ -38,20 +43,49 @@
   justify-content: space-between;
 }
 
-.name {
+.name,
+.nameArchive {
   color: #22a0bc;
   font-weight: 600;
   font-size: 20px;
 }
 
-.company {
+.nameArchive {
+  color: #595959;
+}
+
+.company,
+.companyArchive {
   color: #595959;
   font-weight: 500;
   font-size: 16px;
 }
 
-.city {
+.companyArchive {
+  color: #9c9c9c;
+}
+
+.city,
+.cityArchive {
   color: #9c9c9c;
   font-weight: 500;
   font-size: 14px;
+}
+
+.cityArchive {
+  color: #dadada;
+}
+
+.moreContainer {
+  position: relative;
+}
+
+.moreButton {
+  height: 24px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  left: 0;
+  z-index: 5;
 }
