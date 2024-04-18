@@ -8,3 +8,10 @@
   margin-bottom: 16px;
   color: #161616;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 557px) {
+  .header {
+    margin-bottom: 16px;
+  }
+}

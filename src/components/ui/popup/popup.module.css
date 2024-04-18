@@ -50,3 +50,20 @@
   font-size: 20px;
   color: #595959;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 557px) {
+  .container {
+    padding: 32px;
+    width: 271px;
+    height: 189px;
+  }
+
+  .status {
+    margin-bottom: 16px;
+  }
+
+  .congrats {
+    font-size: 18px;
+  }
+}

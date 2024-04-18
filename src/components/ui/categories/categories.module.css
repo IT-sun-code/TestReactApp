@@ -2,3 +2,10 @@
   width: 280px;
   height: 208px;
 }
+
+@media screen and (max-width: 557px) {
+  .categories {
+    width: 287px;
+    height: 168px;
+  }
+}

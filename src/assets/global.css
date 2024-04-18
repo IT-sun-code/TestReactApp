@@ -70,3 +70,9 @@ body {
 html {
   background: #f4f4f4;
 }
+
+@media screen and (max-width: 1160px) {
+  html {
+    padding: 0 15px 0 16px;
+  }
+}

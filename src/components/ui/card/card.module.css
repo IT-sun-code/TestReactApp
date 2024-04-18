@@ -9,12 +9,14 @@
   margin-bottom: 32px;
 }
 
-.card:nth-child(3n) {
-  margin-right: 0;
-}
+@media screen and (min-width: 1160px) {
+  .card:nth-child(3n) {
+    margin-right: 0;
+  }
 
-.card:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+  .card:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
 }
 
 .ava,
@@ -98,6 +100,162 @@
 
 .dropdownMenu {
   position: absolute;
-  left: 0;
+  right: 0px;
   z-index: 5;
+}
+
+/* Mobile styles */
+@media screen and (min-width: 831px) and (max-width: 1160px) {
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .card:nth-child(1n) {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 557px) and (max-width: 831px) {
+  .card:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 557px) {
+  .card {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 162px;
+    height: 242px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .card:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .card:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .ava {
+    width: 130px;
+    height: 120px;
+    margin-right: 0;
+  }
+
+  .name,
+  .nameArchive {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .company,
+  .companyArchive {
+    color: #595959;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .city,
+  .cityArchive {
+    color: #9c9c9c;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 12px;
+  }
+
+  .moreContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .moreButton {
+    background-image: url("/icons/more-default-mobile-icon.svg");
+  }
+
+  .moreButton:hover,
+  .moreButton:active {
+    background-image: url("/icons/more-tap-mobile-icon.svg");
+  }
+
+  .dropdownMenu {
+    top: 30px;
+    left: -120px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 162px;
+    height: 242px;
+    padding: 16px;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .card:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+
+  .ava {
+    width: 130px;
+    height: 120px;
+    margin-right: 0;
+  }
+
+  .name,
+  .nameArchive {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .company,
+  .companyArchive {
+    color: #595959;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .city,
+  .cityArchive {
+    color: #9c9c9c;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 12px;
+  }
+
+  .moreContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .moreButton {
+    background-image: url("/icons/more-default-mobile-icon.svg");
+  }
+
+  .moreButton:hover,
+  .moreButton:active {
+    background-image: url("/icons/more-tap-mobile-icon.svg");
+  }
+
+  .dropdownMenu {
+    top: 30px;
+    left: -120px;
+  }
 }

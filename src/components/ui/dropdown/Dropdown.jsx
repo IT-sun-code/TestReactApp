@@ -23,7 +23,9 @@ const Dropdown = ({
               <div onClick={handleRemove}>Скрыть</div>
             </>
           ) : (
-            <div onClick={handleActive}>Активировать</div>
+            <div onClick={handleActive} className={styles.archive}>
+              Активировать
+            </div>
           )}
         </div>
       </div>

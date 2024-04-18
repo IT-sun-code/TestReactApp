@@ -4,3 +4,17 @@
   justify-content: flex-start;
   margin-bottom: 40px;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 557px) {
+  .userList {
+    margin-bottom: 32px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 375px) {
+  .userList {
+    justify-content: center;
+  }
+}

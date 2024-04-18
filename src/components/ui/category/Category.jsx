@@ -1,15 +1,17 @@
 import styles from "./category.module.css";
 
-const Category = ({ children, isHeader }) => {
-  return isHeader ? (
+import Line from "../line/Line";
+
+const Category = ({ children, isActive }) => {
+  return isActive ? (
     <div className={styles.category}>
-      <button className={styles.header}>{children}</button>
-      <div className={styles.line} />
+      <button className={styles.active}>{children}</button>
+      <Line />
     </div>
   ) : (
     <div className={styles.category}>
       <button className={styles.data}>{children}</button>
-      <div className={styles.line} />
+      <Line />
     </div>
   );
 };

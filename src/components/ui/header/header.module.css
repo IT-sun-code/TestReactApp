@@ -75,3 +75,20 @@
   font-weight: 500;
   color: #595959;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 557px) {
+  .header {
+    height: 50px;
+  }
+
+  .ava {
+    height: 28px;
+    width: 28px;
+  }
+
+  .name,
+  .icons {
+    display: none;
+  }
+}

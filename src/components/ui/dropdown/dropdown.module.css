@@ -11,6 +11,8 @@
 }
 
 .content > div {
+  font-weight: 500;
+  font-size: 16px;
   border-radius: 8px;
   padding: 8px 12px;
   width: 184px;
@@ -26,4 +28,27 @@
 
 .content > div:hover {
   color: #22a0bc;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 556px) {
+  .container {
+    width: 160px;
+  }
+
+  .dropdown {
+    width: 144px;
+  }
+
+  .content > div {
+    width: 144px;
+    height: 35px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .content > .archive {
+    font-weight: 500;
+    font-size: 16px;
+  }
 }

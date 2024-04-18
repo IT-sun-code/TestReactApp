@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 import Line from "./../../ui/line/Line";
 import Categories from "../../ui/categories/Categories";
-import arrowBack from "/icons/arrow-back-icon.svg";
 import UserForm from "../../ui/userForm/UserForm";
 import Loader from "../../ui/loader/Loader";
 
@@ -23,9 +22,7 @@ const EditPage = () => {
   return (
     <>
       <header className={styles.header}>
-        <button className={styles.btn} onClick={goBack}>
-          <img src={arrowBack} alt="arrow back" />
-        </button>
+        <button className={styles.btn} onClick={goBack}></button>
         <h2 className={styles.back}>Назад</h2>
       </header>
       {!currentUser ? (

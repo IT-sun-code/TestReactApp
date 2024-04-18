@@ -5,10 +5,10 @@ import Category from "../category/Category";
 const Categories = () => {
   return (
     <div className={styles.categories}>
-      <Category isHeader={true}>Данные профиля</Category>
-      <Category isHeader={false}>Рабочее пространство</Category>
-      <Category isHeader={false}>Приватность</Category>
-      <Category isHeader={false}>Безопасность</Category>
+      <Category isActive={true}>Данные профиля</Category>
+      <Category isActive={false}>Рабочее пространство</Category>
+      <Category isActive={false}>Приватность</Category>
+      <Category isActive={false}>Безопасность</Category>
     </div>
   );
 };

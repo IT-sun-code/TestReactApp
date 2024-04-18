@@ -45,3 +45,28 @@ form > label {
   bottom: 9px;
   right: 8px;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 890px) {
+  form {
+    width: 287px;
+    height: 612px;
+  }
+
+  form > label {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .wrapper > input {
+    padding: 11.5px 8px 11.5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .wrapper:last-of-type {
+    margin-bottom: 24px;
+  }
+}

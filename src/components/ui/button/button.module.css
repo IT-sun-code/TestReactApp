@@ -1,6 +1,5 @@
 .btn,
 .btnDisabled {
-  background-color: #161616;
   width: 170px;
   height: 46px;
   border-radius: 50px;
@@ -11,6 +10,10 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s, color 0.3s;
+}
+
+.btn {
+  background-color: #161616;
 }
 
 .btn:hover {
@@ -24,4 +27,24 @@
 
 .btnDisabled:hover {
   cursor: not-allowed;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 557px) {
+  .btn,
+  .btnDisabled {
+    width: 100%;
+    padding: 12px auto;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .btn {
+    background-color: #161616;
+  }
+
+  .btn:focus {
+    background-color: #161616;
+    color: #fdfdfd;
+  }
 }
