@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import ava from "/images/ava.jpg";
 
 const initialState = {
   users: [],
@@ -17,6 +18,7 @@ const userSlice = createSlice({
       state.users = action.payload.map((user) => ({
         ...user,
         isActive: true,
+        avatar: ava,
       }));
     },
     fetchUsersFailure(state) {

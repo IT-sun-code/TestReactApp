@@ -28,6 +28,10 @@ form > label {
   display: block;
 }
 
+.wrapper > input.filled {
+  color: #161616;
+}
+
 .wrapper:last-of-type {
   margin-bottom: 32px;
 }
