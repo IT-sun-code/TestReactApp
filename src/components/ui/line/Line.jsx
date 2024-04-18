@@ -1,7 +1,7 @@
 import styles from "./line.module.css";
 
-function Line() {
+const Line = () => {
   return <div className={styles.line} />;
-}
+};
 
 export default Line;

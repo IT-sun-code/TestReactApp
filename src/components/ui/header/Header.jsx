@@ -5,7 +5,7 @@ import heartIcon from "/icons/heart-icon.svg";
 import bellIcon from "/icons/bell-icon.svg";
 import ava from "/images/ava.jpg";
 
-function Header() {
+const Header = () => {
   return (
     <>
       <header className={styles.header}>
@@ -35,6 +35,6 @@ function Header() {
       </header>
     </>
   );
-}
+};
 
 export default Header;

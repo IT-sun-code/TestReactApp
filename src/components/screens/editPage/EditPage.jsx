@@ -9,7 +9,7 @@ import arrowBack from "/icons/arrow-back-icon.svg";
 import UserForm from "../../ui/userForm/UserForm";
 import Loader from "../../ui/loader/Loader";
 
-function EditPage() {
+const EditPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -53,6 +53,6 @@ function EditPage() {
       )}
     </>
   );
-}
+};
 
 export default EditPage;

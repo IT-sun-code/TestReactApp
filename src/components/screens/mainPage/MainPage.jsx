@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Title from "../../ui/title/Title";
 import UserList from "../../ui/userList/UserList";
 
-function MainPage() {
+const MainPage = () => {
   const { users } = useSelector((state) => state.user);
 
   const activeUsers = users.filter((user) => user.isActive);
@@ -25,6 +25,6 @@ function MainPage() {
       </main>
     </>
   );
-}
+};
 
 export default MainPage;

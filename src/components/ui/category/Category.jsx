@@ -1,6 +1,6 @@
 import styles from "./category.module.css";
 
-function Category({ children, isHeader }) {
+const Category = ({ children, isHeader }) => {
   return isHeader ? (
     <div className={styles.category}>
       <button className={styles.header}>{children}</button>
@@ -12,6 +12,6 @@ function Category({ children, isHeader }) {
       <div className={styles.line} />
     </div>
   );
-}
+};
 
 export default Category;

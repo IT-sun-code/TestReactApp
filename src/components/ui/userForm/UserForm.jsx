@@ -3,10 +3,15 @@ import styles from "./userForm.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateUser } from "../../../redux/userSlice";
+import useModal from "../../../hooks/useModal";
+
+import Popup from "../popup/Popup";
 import Button from "../button/Button";
 
-function UserForm({ userId, currentUser }) {
+const UserForm = ({ userId, currentUser }) => {
   const dispatch = useDispatch();
+
+  const { modalOpen, handleModalOpen, handleModalClose } = useModal();
 
   const [isFieldFilled, setFieldFilled] = useState({
     name: Boolean(currentUser?.name),
@@ -71,6 +76,7 @@ function UserForm({ userId, currentUser }) {
         newData: formData,
       })
     );
+    handleModalOpen();
   };
 
   const handleFocus = (fieldName) => {
@@ -254,8 +260,10 @@ function UserForm({ userId, currentUser }) {
           Сохранить
         </Button>
       </form>
+
+      {modalOpen && <Popup isOpen={modalOpen} onClose={handleModalClose} />}
     </>
   );
-}
+};
 
 export default UserForm;

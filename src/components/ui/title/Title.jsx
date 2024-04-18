@@ -2,7 +2,7 @@ import styles from "./title.module.css";
 
 import Line from "../line/Line";
 
-function Title({ children }) {
+const Title = ({ children }) => {
   return (
     <>
       <header className={styles.header}>
@@ -12,6 +12,6 @@ function Title({ children }) {
       </header>
     </>
   );
-}
+};
 
 export default Title;

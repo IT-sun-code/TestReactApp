@@ -1,6 +1,6 @@
 import styles from "./card.module.css";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import {
   toggleCardActive,
@@ -8,11 +8,11 @@ import {
   setActive,
 } from "../../../redux/userSlice";
 
+import truncateString from "../../../utils/truncateString";
 import Dropdown from "../dropdown/Dropdown";
 import ava from "/images/ava.jpg";
-import truncateString from "../../../utils/truncateString";
 
-function Card({ user }) {
+const Card = ({ user }) => {
   const dispatch = useDispatch();
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const { id, username, company, address, isActive } = user;
@@ -38,6 +38,21 @@ function Card({ user }) {
   const truncatedCompanyName = truncateString(company.name, 16);
   const truncatedCityName = truncateString(address.city, 18);
 
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <div className={styles.card}>
@@ -58,7 +73,7 @@ function Card({ user }) {
               <div className={styles.moreContainer} onClick={toggleDropdown}>
                 <button className={styles.moreButton} title="More"></button>
                 {dropdownVisible && (
-                  <div className={styles.dropdownMenu}>
+                  <div className={styles.dropdownMenu} ref={dropdownRef}>
                     <Dropdown
                       isActive={isActive}
                       handleArchive={archiveCard}
@@ -87,6 +102,6 @@ function Card({ user }) {
       </div>
     </>
   );
-}
+};
 
 export default Card;

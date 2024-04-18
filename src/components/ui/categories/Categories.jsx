@@ -2,7 +2,7 @@ import styles from "./categories.module.css";
 
 import Category from "../category/Category";
 
-function Categories() {
+const Categories = () => {
   return (
     <div className={styles.categories}>
       <Category isHeader={true}>Данные профиля</Category>
@@ -11,6 +11,6 @@ function Categories() {
       <Category isHeader={false}>Безопасность</Category>
     </div>
   );
-}
+};
 
 export default Categories;
