@@ -1,0 +1,49 @@
+.category {
+  margin-bottom: 23px;
+}
+
+.category:last-child {
+  margin-bottom: 0;
+}
+
+.active,
+.data {
+  margin-bottom: 11px;
+}
+
+.active {
+  font-size: 16px;
+  font-weight: 600;
+  color: #161616;
+  transition: color 0.3s ease;
+}
+
+.data {
+  font-size: 16px;
+  font-weight: 500;
+  color: #9c9c9c;
+  transition: color 0.3s ease;
+}
+
+.active:hover,
+.data:hover {
+  color: #22a0bc;
+}
+
+/* Mobile and tablet styles */
+@media screen and (max-width: 557px) {
+  .category {
+    height: 27px;
+    margin-bottom: 19px;
+  }
+
+  .active,
+  .data {
+    margin-bottom: 7px;
+  }
+
+  .active,
+  .data {
+    font-size: 14px;
+  }
+}

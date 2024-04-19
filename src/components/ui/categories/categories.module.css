@@ -1,0 +1,12 @@
+.categories {
+  width: 280px;
+  height: 208px;
+}
+
+/* Mobile and tablet styles */
+@media screen and (max-width: 557px) {
+  .categories {
+    width: 287px;
+    height: 168px;
+  }
+}

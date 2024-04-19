@@ -1,0 +1,17 @@
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #161616;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 557px) {
+  .header {
+    margin-bottom: 16px;
+  }
+}

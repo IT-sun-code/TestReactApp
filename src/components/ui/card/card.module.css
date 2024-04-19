@@ -1,0 +1,269 @@
+.card {
+  display: flex;
+  background: #fdfdfd;
+  width: 360px;
+  height: 168px;
+  border-radius: 16px;
+  padding: 24px;
+  margin-right: 40px;
+  margin-bottom: 32px;
+}
+
+.ava,
+.avaArchive {
+  object-fit: cover;
+  border-radius: 8px;
+  min-width: 112px;
+  height: 122px;
+  margin-right: 20px;
+}
+
+.avaArchive {
+  filter: grayscale(100%);
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nameAndMore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.name,
+.nameArchive {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.name {
+  color: #22a0bc;
+}
+
+.nameArchive {
+  color: #595959;
+}
+
+.company,
+.companyArchive {
+  color: #595959;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.companyArchive {
+  color: #9c9c9c;
+}
+
+.city,
+.cityArchive {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.city {
+  color: #9c9c9c;
+}
+
+.cityArchive {
+  color: #dadada;
+}
+
+.moreContainer {
+  position: relative;
+}
+
+.moreButton {
+  width: 24px;
+  height: 24px;
+  background-image: url("/icons/more-default-icon.svg");
+  background-size: cover;
+  transition: background-image 0.3s ease;
+}
+
+.moreButton:hover {
+  background-image: url("/icons/more-hover-icon.svg");
+}
+
+.moreButton:active {
+  background-image: url("/icons/more-tap-icon.svg");
+}
+
+.dropdownMenu {
+  position: absolute;
+  right: 0px;
+  z-index: 5;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1160px) {
+  .card:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .card:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
+/* Mobile and tablet styles */
+@media screen and (min-width: 831px) and (max-width: 1160px) {
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .card:nth-child(1n) {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 557px) and (max-width: 831px) {
+  .card:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 557px) {
+  .card {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 162px;
+    height: 242px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .card:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .card:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .ava {
+    width: 100%;
+    height: 120px;
+    margin-right: 0;
+  }
+
+  .name,
+  .nameArchive {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .company,
+  .companyArchive {
+    color: #595959;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .city,
+  .cityArchive {
+    color: #9c9c9c;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 12px;
+  }
+
+  .moreContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .moreButton {
+    background-image: url("/icons/more-default-mobile-icon.svg");
+  }
+
+  .moreButton:hover,
+  .moreButton:active {
+    background-image: url("/icons/more-tap-mobile-icon.svg");
+  }
+
+  .dropdownMenu {
+    top: 30px;
+    left: -120px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    height: 242px;
+    padding: 16px;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .card:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+
+  .ava {
+    width: 100%;
+    height: 120px;
+    margin-right: 0;
+  }
+
+  .name,
+  .nameArchive {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .company,
+  .companyArchive {
+    color: #595959;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .city,
+  .cityArchive {
+    color: #9c9c9c;
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 12px;
+  }
+
+  .moreContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .moreButton {
+    background-image: url("/icons/more-default-mobile-icon.svg");
+  }
+
+  .moreButton:hover,
+  .moreButton:active {
+    background-image: url("/icons/more-tap-mobile-icon.svg");
+  }
+
+  .dropdownMenu {
+    top: 30px;
+    left: -130px;
+  }
+}
