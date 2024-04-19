@@ -42,9 +42,4 @@
   .btn {
     background-color: #161616;
   }
-
-  .btn:focus {
-    background-color: #161616;
-    color: #fdfdfd;
-  }
 }

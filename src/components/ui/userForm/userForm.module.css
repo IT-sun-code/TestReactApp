@@ -46,7 +46,7 @@ form > label {
   right: 8px;
 }
 
-/* Mobile styles */
+/* Mobile and tablet styles */
 @media screen and (max-width: 890px) {
   form {
     width: 287px;

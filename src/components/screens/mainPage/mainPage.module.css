@@ -2,7 +2,7 @@
   margin-top: 96px;
 }
 
-/* Mobile styles */
+/* Mobile and tablet styles */
 @media screen and (max-width: 557px) {
   .main {
     margin-top: 82px;

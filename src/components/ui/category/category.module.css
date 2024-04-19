@@ -30,7 +30,7 @@
   color: #22a0bc;
 }
 
-/* Mobile styles */
+/* Mobile and tablet styles */
 @media screen and (max-width: 557px) {
   .category {
     height: 27px;

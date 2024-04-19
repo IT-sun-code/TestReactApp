@@ -10,12 +10,11 @@ import {
 
 import truncateString from "../../../utils/truncateString";
 import Dropdown from "../dropdown/Dropdown";
-import ava from "/images/ava.jpg";
 
 const Card = ({ user }) => {
   const dispatch = useDispatch();
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  const { id, username, company, address, isActive } = user;
+  const { id, username, company, address, isActive, avatar } = user;
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -57,7 +56,7 @@ const Card = ({ user }) => {
     <>
       <div className={styles.card}>
         <img
-          src={ava}
+          src={avatar}
           alt="avatar"
           className={isActive ? styles.ava : styles.avaArchive}
         />

@@ -35,7 +35,7 @@
 .ava {
   object-fit: cover;
   border-radius: 8px;
-  width: 280px;
+  width: 100%;
   height: 485px;
   margin-bottom: 40px;
 }
@@ -58,7 +58,21 @@
   font-weight: 600;
 }
 
-/* Mobile styles */
+/* Mobile and tablet styles */
+@media screen and (min-width: 890px) and (max-width: 1152px) {
+  .settings {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 32px;
+  }
+
+  .profileData {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: 32px;
+  }
+}
+
 @media screen and (max-width: 890px) {
   .header {
     margin-top: 50px;
@@ -93,7 +107,7 @@
 
   .ava {
     border-radius: 8px;
-    width: 287px;
+    width: 100%;
     height: 187px;
     margin-bottom: 24px;
   }
@@ -108,20 +122,5 @@
 
   .dataHeader {
     margin-bottom: 20px;
-  }
-}
-
-/* Mobile styles */
-@media screen and (min-width: 890px) and (max-width: 1160px) {
-  .settings {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 32px;
-  }
-
-  .profileData {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-bottom: 32px;
   }
 }
