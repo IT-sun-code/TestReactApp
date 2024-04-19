@@ -45,7 +45,7 @@ function Popup({ isOpen, onClose }) {
                   onClick={onClose}
                 />
               </button>
-              <img src={status} alt="Valid status" className={styles.status} />
+              <img src={status} alt="valid status" className={styles.status} />
               <h2 className={styles.congrats}>Изменения сохранены!</h2>
             </div>
             <div className={styles.overlay} />
